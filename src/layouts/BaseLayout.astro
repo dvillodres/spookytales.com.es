@@ -1,0 +1,113 @@
+---
+import Header from "../components/Header.astro";
+const {bg = '/assets/img/bg.webp', fog = true} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias Interactivas con tus fotografías | SpookyTales.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
+
+    <style is:global>
+
+        .character {
+            filter: contrast(1.6) brightness(.9) grayscale(.6);
+        }
+
+        @font-face {
+            font-family: 'Nosifer';
+            src: url('/assets/fonts/Nosifer-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Creepster';
+            src: url('/assets/fonts/Creepster-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Teko';
+            src: url('/assets/fonts/Teko-VariableFont_wght.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Edu AU VIC WA NT Guides';
+            src: url('/assets/fonts/EduAUVICWANTGuides-Regular.ttf') format('truetype');
+        }
+        .nosifer {
+            font-family: 'Nosifer', sans-serif;
+        }
+        .creepster {
+            font-family: 'Creepster', sans-serif;
+        }
+        .edu {
+            font-family: 'Edu AU VIC WA NT Guides', sans-serif;
+        }
+        .teko {
+            font-family: 'Teko', sans-serif;
+        }
+
+        .fog {
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
+            animation: moveFog 50s infinite alternate;
+        }
+
+        .fog-slow {
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
+            animation: moveFog 70s infinite alternate;
+        }
+
+        @keyframes moveFog {
+            from {
+                background-position: 0% 0%;
+            }
+            to {
+                background-position: 50% 50%;
+            }
+        }
+
+        .glow-text {
+            animation: glow 5s infinite alternate;
+        }
+
+        .glow-text-stop {
+            text-shadow: 0 0 20px rgb(132, 0, 255);
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(115, 0, 255, 0.5);
+            }
+            45% {
+                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
+            }
+            47% {
+                text-shadow: 0 0 5px rgba(115, 0, 255, 0.2);
+            }
+            49% {
+                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
+            }
+            51% {
+                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
+            }
+            53% {
+                text-shadow: 0 0 5px rgba(115, 0, 255, 0.2);
+            }
+            55% {
+                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
+            }
+            100% {
+                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body class=`bg-gray-900 text-white font-sans min-h-screen flex flex-col items-center justify-center ${fog ? 'fog' : ''}` style=`background-image: url(${bg}); background-repeat: no-repeat; background-size: cover;"`>
+
+    <div class=`relative flex flex-col w-full h-screen text-center bg-cover bg-center ${fog ? 'bg-purple-950/60 backdrop-blur-sm' : ''}`>
+        <Header/>
+        <slot/>
+    </div>
+</body>
+</html>

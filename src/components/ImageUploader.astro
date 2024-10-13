@@ -1,0 +1,67 @@
+---
+import {CldUploadWidget} from "astro-cloudinary";
+---
+
+<CldUploadWidget
+        id="upload-widget"
+        uploadPreset="storytales2"
+        options={{
+            sources: ["local"],
+            multiple: false,
+            maxFiles: 1,
+            language: "es",
+            minImageWidth: 600,
+            minImageHeight: 600,
+            theme : "minimal",
+            styles: {
+                palette: {
+                    window: "rgb(132,0,255)",
+                    windowBorder: "#ffffff",
+                    tabIcon: "#ffffff",
+                    menuIcons: "#ffffff",
+                    textDark: "#e8e8e8",
+                    textLight: "#FFFFFF",
+                    link: "#7b00ff",
+                    action: "#FF620C",
+                    inactiveTabIcon: "#ffffff",
+                    error: "#F44235",
+                    inProgress: "#0078FF",
+                    complete: "#20B832",
+                    sourceBg: "rgba(46,0,100,0.8)"
+                },
+                frame: {
+                    background: "rgba(46,0,100,0.5)"
+                }
+            },
+            text: {
+                es: {
+                    or: "",
+
+                    menu: {
+                        files: "Subir desde tu dispositivo",
+                    },
+                    local: {
+                        browse: "Seleccionar",
+                        dd_title_single: "Arrastra tu imagen aquí",
+                    },
+                },
+            },
+        }}
+>
+    <button class="cursor-pointer bg-purple-950/40 backdrop-blur-2xl border-2 border-neutral-900 p-6 rounded-2xl text-2xl lg:text-6xl glow-text creepster mb-6">
+        Subir Imagen y Comenzar Aventura
+    </button>
+</CldUploadWidget>
+
+<script>
+    import { navigate } from "astro:transitions/client"
+    const widget = document.getElementById("upload-widget")
+
+    if (widget) {
+        widget.addEventListener("clduploadwidget:success", ((
+            e: CustomEvent<{ info: { public_id: string } }>
+        ) => {
+            navigate(`/aventura/${e.detail.info.public_id}`)
+        }) as EventListener)
+    }
+</script>

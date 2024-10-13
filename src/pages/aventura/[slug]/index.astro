@@ -1,0 +1,48 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+const { slug } = Astro.params;
+
+---
+
+<Layout>
+    <div id="container" class="relative overflow-hidden w-full h-full fog-slow">
+        <div class="bg-purple-950/30 backdrop-blur-sm overflow-hidden w-full h-full flex justify-center items-center">
+            <div class="w-[960px] min-h-[80vh] p-12 items-center justify-center flex flex-col gap-4 bg-neutral-950/60 rounded-xl">
+                <h2 class="text-white text-2xl mb-4">Introduce tu nombre de usuario</h2>
+
+                <!-- Formulario para el nombre de usuario -->
+                <form id="form" data-slug={slug} class="flex flex-col gap-4 w-full max-w-md">
+                    <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Nombre de usuario"
+                            class="p-2 rounded bg-gray-800 text-white focus:outline-none"
+                            required
+                    />
+                    <button
+                            type="submit"
+                            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    >
+                        Iniciar Aventura
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+
+<script>
+        const form = document.getElementById('form')
+        form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const usernameInput = document.getElementById('username');
+        let username = usernameInput.value.trim().toLowerCase();
+        if (/^[a-z0-9]+$/.test(username)) {
+            window.location.href = `/aventura/${form.dataset.slug}/${username}`;
+        } else {
+            alert("El nombre de usuario debe ser solo alfanumérico y en minúsculas.");
+        }
+    })
+</script>

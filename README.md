@@ -1,47 +1,73 @@
-# Astro Starter Kit: Minimal
+# 🎃 Spookytales.com 👻
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## Descripción
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+**Spookytales.com** es una aplicación interactiva donde los usuarios pueden subir una fotografía suya, y mediante la magia de la IA proporcionada por Cloudinary, la imagen va transformándose mientras se narra una historia de terror. Al final de la historia, la fotografía se convierte en una imagen aterradora. 👹
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Además, los usuarios podrán explorar una galería con las imágenes transformadas de otros participantes y votar por sus favoritas, creando una experiencia espeluznante y colaborativa. 🕸️
 
-## 🚀 Project Structure
+## Características principales
 
-Inside of your Astro project, you'll see the following folders and files:
+- 🧙 **Transformación de imágenes con IA**: Usa la IA de Cloudinary para alterar las fotografías a lo largo de una historia de terror.
+- 🎭 **Galería comunitaria**: Los usuarios pueden ver las imágenes generadas por otros y votar por sus favoritas.
+- 🧛 **Votaciones**: Las imágenes más votadas aparecerán en un ranking destacado.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Tecnologías utilizadas
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- [**Astro**](https://astro.build/): Framework ligero y moderno para generar sitios estáticos rápidos.
+- [**Svelte**](https://svelte.dev/): Utilizado en combinación con Astro para crear componentes dinámicos e interactivos.
+- [**Cloudinary SDK**](https://cloudinary.com/documentation): Para manejar la carga, procesamiento y transformación de las imágenes.
+- [**Strapi**](https://strapi.io/): Usado como CMS para almacenar y gestionar las votaciones de los usuarios.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Instalación
 
-Any static assets, like images, can be placed in the `public/` directory.
+Sigue los siguientes pasos para ejecutar **Spookytales.com** localmente:
 
-## 🧞 Commands
+1. **Clona este repositorio**:
+   ```bash
+   git clone https://github.com/dvillodres/spookytales.com.git
+   cd spookytales.com
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. **Instala las dependencias**:
+   ```bash
+   npm install
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3. **Configura Cloudinary y Strapi**:
 
-## 👀 Want to learn more?
+    - Crea una cuenta en [Cloudinary](https://cloudinary.com) y obtén tus credenciales API.
+    - Despliega un servidor de [Strapi](https://strapi.io) para manejar las votaciones.
+    - Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+      ```
+      CLOUDINARY_CLOUD_NAME=tu_cloud_name
+      CLOUDINARY_API_KEY=tu_api_key
+      CLOUDINARY_API_SECRET=tu_api_secret
+      STRAPI_API_URL=https://tu-depliegue-de-strapi.com
+      ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+4. **Ejecuta el proyecto**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Accede a la aplicación**: Ve a `http://localhost:4321` en tu navegador para ver **Spookytales.com** en acción.
+
+## Uso
+
+1. Sube una foto y disfruta cómo se transforma mientras se narra una historia de terror. 🎃
+2. Explora la galería para ver las imágenes de otros usuarios. 🕸️
+3. Vota por tus imágenes favoritas y descubre las más populares en el ranking. 👹
+
+## Créditos y Agradecimientos
+
+Este proyecto fue desarrollado como parte del hackathon **Cloudinary CloudCreate Spooky AI**, organizado por [**Midudev**](https://midu.dev) y [**Cloudinary**](https://cloudinary.com). 🎃 ¡Gracias por la oportunidad de crear algo tan divertido y espeluznante!
+
+¡Entendido! Aquí tienes una versión más breve y directa para la sección "Author" o "Developer":
+
+---
+
+## Developer
+
+Hola! Soy @dvillodres si quieres comentar algo del proyecto puedes contactarme en [~~Twitter~~ x](https://x.com/dvillodres_)  si quieres saber más sobre mí puedes ir a mi uedes visitar mi [web](https://www.d-v.es) personal.
+

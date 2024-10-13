@@ -1,0 +1,9 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import StoryBox from "../../../../components/StoryBox.svelte";
+const {slug, username} = Astro.params;
+---
+
+<Layout>
+    <StoryBox client:load {slug} {username} />
+</Layout>

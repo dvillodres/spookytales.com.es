@@ -1,16 +1,36 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ImageUploader from "../components/ImageUploader.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+	<div class="w-full h-full flex flex-col justify-center items-center p-3 md:p-0">
+		<h1 transition:name="heading" class="text-4xl md:text-6xl glow-text creepster mb-6">SpookyTales.com</h1>
+		<p class="text-lg md:text-xl mb-10 max-w-2xl">Adéntrate en un mundo de misterio. Sube una fotografía tuya y transforma tu destino en una experiencia de terror única.</p>
+
+		<ImageUploader/>
+
+		<small class="mb-8 max-w-2xl">*Para disfrutar de la experiencia te recomendamos elegir una fotografía frontal, de plano medio y sonriendo 😁, tambien te recomendamos utilizar cascos 🎧 y un ordenador 💻.</small>
+		<div class="w-full flex gap-3 justify-center">
+			<div class="relative h-48 w-48">
+				<span style="z-index: 1" class="border border-purple-950 absolute rounded-full bg-green-600 h-12 w-12 flex items-center justify-center -top-4 -right-2 text-3xl">👍</span>
+				<div class="w-full h-full rounded-xl border-2 border-green-500 overflow-hidden p-0 m-0">
+					<img src="/assets/img/recomended-images/good-image.webp"
+						 class="character w-full h-full object-cover object-center  p-0 m-0"
+						 alt="Imagen recomendada para disfrutar de spookytales.com" >
+				</div>
+			</div>
+
+			<div class="relative h-48 w-48">
+				<span style="z-index: 1" class="border border-purple-950 absolute rounded-full bg-red-600 h-12 w-12 flex items-center justify-center -top-4 -right-2 text-3xl">👎</span>
+				<div class="w-full h-full  rounded-xl border-2 border-red-500 overflow-hidden p-0 m-0">
+					<img src="/assets/img/recomended-images/bad-image.webp"
+						class="character w-full h-full object-cover object-center  p-0 m-0"
+						alt="Imagen NO recomendada para disfrutar de spookytales.com" >
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
+
+

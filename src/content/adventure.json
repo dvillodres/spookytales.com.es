@@ -1,0 +1,58 @@
+[
+    {
+      "phase": 0,
+      "title": "Introducción",
+      "description": "Eras tú, al menos al principio. Un día como cualquier otro, caminando entre las sombras al atardecer, notaste algo extraño en tu reflejo. Un brillo, una sombra, algo que no debería estar ahí...",
+      "image": "introduccion.png",
+      "prompt" : null,
+      "replace" : null
+    },
+    {
+      "phase": 1,
+      "title": "Sombra Susurrante",
+      "description": "Al avanzar, una sensación extraña recorre tu espalda, como si una sombra se pegara a ti. Notas que la sombra detrás de ti ha cambiado. No es tuya... parece que tiene garras.",
+      "image": "escena-2-characterc.webp",
+      "prompt" : null,
+      "replace" : "face"
+    },
+    {
+      "phase": 2,
+      "title": "Ojos en la Oscuridad",
+      "description": "Mientras sigues, tu visión se torna borrosa y ves destellos en la oscuridad. Al mirar de nuevo tu reflejo, hay ojos extraños que te observan desde el fondo. Ojos que no pertenecen a ningún ser humano.",
+      "image": "escena-3-characterb.webp",
+      "prompt" : "very afraid face",
+      "replace" : "face"
+    },
+    {
+      "phase": 3,
+      "title": "Rasgos Distorsionados",
+      "description": "Tu rostro comienza a cambiar. Sientes un cosquilleo en la piel, y tu reflejo en el espejo muestra algo retorcido: la piel parece estirarse, tus ojos se hunden, y los dientes... se han vuelto amarillos.",
+      "image": "escena-3-character.webp",
+      "prompt" : "very afraid face with vampire makeup with yellow teeth",
+      "replace" : "face"
+    },
+    {
+      "phase": 4,
+      "title": "Carne Retorcida",
+      "description": "Tus manos tiemblan al mirarlas. Ya no son tuyas. La piel se rasga, mostrando algo debajo... algo que no es humano. Una mueca antinatural se dibuja en tu cara.",
+      "image": "escena-4-character.webp",
+      "prompt" : "very angry face with vampire makeup with yellow fangs",
+      "replace" : "face"
+    },
+    {
+      "phase": 5,
+      "title": "La Revelación",
+      "description": "Finalmente, te ves por completo... y la verdad te golpea como un vendaval. No eres tú. Has sido reemplazado por algo que acecha desde lo más profundo de la oscuridad. Algo que ha tomado tu rostro, pero lo ha transformado en una criatura de pesadillas.",
+      "image": "fase5_la_revelacion.png",
+      "prompt" : "A nosferatu like vampire with yellow fangs",
+      "replace" : "person"
+    },
+    {
+      "phase": 6,
+      "title": "La Despedida",
+      "description": "Miras el reflejo, pero ya no eres tú. A través de la niebla del espejo, el monstruo te observa, sonríe... y da un paso más cerca.",
+      "image": "escena-7.webp",
+      "prompt" : null,
+      "replace" : "face"
+    }
+  ]
