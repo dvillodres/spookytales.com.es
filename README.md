@@ -1,8 +1,8 @@
-# 🎃 Spookytales.com 👻
+# 🎃 spookytales.com.es 👻
 
 ## Descripción
 
-**Spookytales.com** es una aplicación interactiva donde los usuarios pueden subir una fotografía suya, y mediante la magia de la IA proporcionada por Cloudinary, la imagen va transformándose mientras se narra una historia de terror. Al final de la historia, la fotografía se convierte en una imagen aterradora. 👹
+**spookytales.com.es** es una aplicación interactiva donde los usuarios pueden subir una fotografía suya, y mediante la magia de la IA proporcionada por Cloudinary, la imagen va transformándose mientras se narra una historia de terror. Al final de la historia, la fotografía se convierte en una imagen aterradora. 👹
 
 Además, los usuarios podrán explorar una galería con las imágenes transformadas de otros participantes y votar por sus favoritas, creando una experiencia espeluznante y colaborativa. 🕸️
 
@@ -21,12 +21,12 @@ Además, los usuarios podrán explorar una galería con las imágenes transforma
 
 ## Instalación
 
-Sigue los siguientes pasos para ejecutar **Spookytales.com** localmente:
+Sigue los siguientes pasos para ejecutar **spookytales.com.es** localmente:
 
 1. **Clona este repositorio**:
    ```bash
-   git clone https://github.com/dvillodres/spookytales.com.git
-   cd spookytales.com
+   git clone https://github.com/dvillodres/spookytales.com.es.git
+   cd spookytales.com.es
    ```
 
 2. **Instala las dependencias**:
@@ -51,7 +51,7 @@ Sigue los siguientes pasos para ejecutar **Spookytales.com** localmente:
    npm run dev
    ```
 
-5. **Accede a la aplicación**: Ve a `http://localhost:4321` en tu navegador para ver **Spookytales.com** en acción.
+5. **Accede a la aplicación**: Ve a `http://localhost:4321` en tu navegador para ver **spookytales.com.es** en acción.
 
 ## Uso
 
