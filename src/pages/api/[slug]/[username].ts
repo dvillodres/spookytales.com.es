@@ -18,29 +18,22 @@ export async function GET({ params }) {
         })
     }
 
-    const getBaseImage = (slug) => {
-        return getCldImageUrl({
-            src: slug,
-            width: "800",
-            height: "800",
-            crop: "crop",
-        })
-    }
-
     const getExtractedBaseImage = (slug) => {
         return getCldImageUrl({
             src: slug,
+            format: "webp",
             width: "800",
             height: "800",
             extract: 'person',
             crop: "crop",
+            sharpen: true
         })
     }
 
 
 
     const results = await fetch('https://n8n-strapi.pauypi.easypanel.host/spooky-tales-adventures/2')
-        .then(response => response.json())  // Asumiendo que la respuesta es JSON
+        .then(response => response.json())
         .then(async (response) => {
             adventure = response.scenes
 
@@ -69,10 +62,7 @@ export async function GET({ params }) {
                 };
             });
 
-            // Esperar a que todas las promesas se resuelvan
-            const results = await Promise.all(promises);
-
-            return results;
+            return await Promise.all(promises);
         });
 
     await fetch('https://n8n-strapi.pauypi.easypanel.host/spooky-tales-games', {
@@ -82,8 +72,8 @@ export async function GET({ params }) {
             'Content-Type': 'application/json'
         }
     })
-    .then(response => response.json())  // Asumiendo que la respuesta es JSON
-    .then(response => console.log(response.data))  // Asumiendo que la respuesta es JSON
+    .then(response => response.json())
+    .then(response => console.log(response.data))
     .catch((e) => {
         console.log(e.status)
         console.log(e.body)

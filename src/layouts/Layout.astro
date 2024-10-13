@@ -1,9 +1,8 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import Header from "../components/Header.astro";
 const {bg = '/assets/img/bg.webp', fog = true} = Astro.props;
 ---
 <BaseLayout {fog} {bg}>
-    <main class="w-full h-full flex flex-col justify-center items-center overflow-hidden">
-        <slot/>
-    </main>
+    <slot/>
 </BaseLayout>
