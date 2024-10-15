@@ -64,42 +64,11 @@ const {bg = '/assets/img/bg.webp', fog = true} = Astro.props;
             }
         }
 
-        .glow-text {
-            animation: glow 5s infinite alternate;
-        }
+
 
         .glow-text-stop {
             text-shadow: 0 0 20px rgb(132, 0, 255);
         }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px rgba(115, 0, 255, 0.5);
-            }
-            45% {
-                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
-            }
-            47% {
-                text-shadow: 0 0 5px rgba(115, 0, 255, 0.2);
-            }
-            49% {
-                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
-            }
-            51% {
-                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
-            }
-            53% {
-                text-shadow: 0 0 5px rgba(115, 0, 255, 0.2);
-            }
-            55% {
-                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
-            }
-            100% {
-                text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px #9900ff, 0 0 60px #7b00ff;
-            }
-        }
-
-
     </style>
 
 </head>

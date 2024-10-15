@@ -8,31 +8,23 @@ export async function GET({ params }) {
             src: slug,
             format: "webp",
             extract: 'person',
-            replace: [scene.replace, scene.prompt, true],
-            fillLight: true,
-            width: "800",
-            height: "800",
-            crop: "crop",
-            sharpen: true
+            replace: [scene.replace, scene.prompt, true]
         })
     }
 
     const getBaseImage = (slug) => {
         return getCldImageUrl({
             src: slug,
-            width: "800",
-            height: "800",
-            crop: "crop",
+            format: "webp",
+            extract: 'person'
         })
     }
 
     const getExtractedBaseImage = (slug) => {
         return getCldImageUrl({
             src: slug,
-            width: "800",
-            height: "800",
-            extract: 'person',
-            crop: "crop",
+            format: "webp",
+            extract: 'person'
         })
     }
 
@@ -60,6 +52,8 @@ export async function GET({ params }) {
         imageUrl = getBaseImage(slug);
     }
 
+    console.log(imageUrl)
+
     const imageResponse = await fetch(imageUrl);
     const imageBlob = await imageResponse.blob();
 
@@ -67,7 +61,7 @@ export async function GET({ params }) {
         status: 200,
         headers: {
             'Content-Type': 'image/webp',
-            'Cache-Control': 'public, max-age=3600', // 1 hora de cache
+            'Cache-Control': 'public, max-age=3600',
         },
     });
 }

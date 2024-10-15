@@ -13,6 +13,9 @@ import {CldUploadWidget} from "astro-cloudinary";
             minImageWidth: 600,
             minImageHeight: 600,
             theme : "minimal",
+            cropping: true,
+            croppingAspectRatio: 1,
+            showSkipCropButton: false,
             styles: {
                 palette: {
                     window: "rgb(132,0,255)",
@@ -48,7 +51,7 @@ import {CldUploadWidget} from "astro-cloudinary";
             },
         }}
 >
-    <button class="cursor-pointer bg-purple-950/40 backdrop-blur-2xl border-2 border-neutral-900 p-6 rounded-2xl text-2xl lg:text-6xl glow-text creepster mb-6">
+    <button class="hover:shadow-purple-800 hover:shadow-2xl duration-500 cursor-pointer bg-purple-950/40 backdrop-blur-2xl border-2 border-neutral-900 p-6 rounded-2xl text-2xl lg:text-6xl glow-text creepster mb-6">
         Subir Imagen y Comenzar Aventura
     </button>
 </CldUploadWidget>

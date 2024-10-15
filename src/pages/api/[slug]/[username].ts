@@ -30,8 +30,6 @@ export async function GET({ params }) {
         })
     }
 
-
-
     const results = await fetch('https://n8n-strapi.pauypi.easypanel.host/spooky-tales-adventures/2')
         .then(response => response.json())
         .then(async (response) => {

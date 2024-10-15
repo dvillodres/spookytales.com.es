@@ -1,6 +1,7 @@
 ---
 
 import Layout from "../../../../layouts/Layout.astro";
+import ImageUploader from "../../../../components/ImageUploader.astro";
 
 const {slug, username} = Astro.params
 
@@ -22,8 +23,17 @@ const {slug, username} = Astro.params
                 <div class="w-full p-10 md:w-2/3 bg-neutral-900/40 rounded-2xl">
                     <h1 class="text-2xl w-full mb-4"> <span class="creepster">Comparte la experiencia spookytales.com.es</span> 🎃👻</h1>
 
-                    <p class="mb-3 font-light"><strong>¿Qué es spookytales.com.es?</strong> Es una aplicación interactiva donde los usuarios pueden subir una fotografía suya, y mediante la magia de la IA, la imagen va transformándose mientras se narra una historia de terror. Al final de la historia, la fotografía se convierte en una imagen aterradora.</p>
-                 </div>
+                    <p class="mb-3 font-light"><strong class="capitalize">{username}</strong> te ha invitado a descubrir la experiencia única de <a class="text-purple-500 hover:text-purple-600 creepster font-medium" href="https://spookytales.com.es">spookytales</a>. No te pierdas esta aventura terrorífica.</p>
+
+                    <a
+                            href="/"
+                            class="block w-full text-center cursor-pointer bg-purple-950/40 backdrop-blur-2xl border border-neutral-900 p-2 rounded text-sm  glow-text creepster mb-6"
+                    >
+                        Iniciar Aventura
+                    </a>
+
+
+                </div>
             </div>
         </div>
     </div>

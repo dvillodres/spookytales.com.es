@@ -20,11 +20,11 @@
     onMount(() => {
         music = new Audio('/assets/music/sound.mp3')
         sound = new Audio('/assets/music/sonido-1.mp3')
-        scream = new Audio('/assets/music/scream.mp3')
+        scream = new Audio('/assets/music/scream2.mp3')
 
         music.loop = true;
         fetch(`/api/${slug}/${username}`)
-            .then(response => response.json())  // Asumiendo que la respuesta es JSON
+            .then(response => response.json())
             .then((response) => {
                 data = response.data
             });
@@ -57,15 +57,13 @@
 
 {#if !hidePanel}
     <div id="container" data-slug={slug} class="relative overflow-hidden w-full h-full fog-slow" style={bg}>
-        <div class="bg-purple-950/30 backdrop-blur-sm overflow-hidden w-full h-full flex justify-center items-center ">
-            <div class="w-[960px] min-h-[80vh] p-12 items-center justify-center flex flex-col gap-4 bg-neutral-950/60 rounded-xl">
+        <div class="bg-purple-950/30  overflow-hidden w-full h-full flex justify-center items-center ">
+            <div class="w-[960px] min-h-[80vh] p-12 items-center justify-center flex flex-col gap-4 rounded-xl">
                 {#if data !== null && !isLastPage}
                     <TerrorImage imgURL={image} bgURL={bgImage} />
                 {/if}
                 {#if data !== null}
-                    <p class="font-mono">{description}</p>
-                {:else}
-                    <p class="font-mono">Eras tú, al menos al principio. Un día como cualquier otro, caminando entre las sombras al atardecer, notaste algo extraño en tu reflejo. Un brillo, una sombra, algo que no debería estar ahí...</p>
+                    <p class="font-mono bg-black/40 rounded p-3">{description}</p>
                 {/if}
                 {#if data !== null}
                     <button on:click={nextScene}  class="font-mono bg-purple-500/20 backdrop-blur rounded py-2 w-full">{#if isLastPage}Finalizar{:else if started }Avanzar{:else}Comenzar{/if}</button>
