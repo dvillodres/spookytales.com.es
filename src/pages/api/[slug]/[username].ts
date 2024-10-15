@@ -9,12 +9,7 @@ export async function GET({ params }) {
             src: slug,
             format: "webp",
             extract: 'person',
-            replace: [scene.replace, scene.prompt, true],
-            fillLight: true,
-            width: "800",
-            height: "800",
-            crop: "crop",
-            sharpen: true
+            replace: [scene.replace, scene.prompt, true]
         })
     }
 
@@ -22,11 +17,7 @@ export async function GET({ params }) {
         return getCldImageUrl({
             src: slug,
             format: "webp",
-            width: "800",
-            height: "800",
-            extract: 'person',
-            crop: "crop",
-            sharpen: true
+            extract: 'person'
         })
     }
 
