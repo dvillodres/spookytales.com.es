@@ -1,13 +1,36 @@
 ---
 import Header from "../components/Header.astro";
 const {bg = '/assets/img/bg.webp', fog = true} = Astro.props;
+
+const title = "Historias Interactivas con tus fotografías | spookytales.com.es";
+const description = "Adéntrate en un mundo de misterio. Sube una fotografía tuya y transforma tu destino en una experiencia de terror única.";
 ---
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historias Interactivas con tus fotografías | spookytales.com.es</title>
+    <title>{title}</title>
+
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
+    <meta name="google-adsense-account" content="ca-pub-9406276311201724">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/assets/img/spookytales.webp', Astro.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL('/assets/img/spookytales.webp', Astro.url)} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
 
     <style is:global>
