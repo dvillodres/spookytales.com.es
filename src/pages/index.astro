@@ -1,12 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ImageUploader from "../components/ImageUploader.astro";
-import Loader from "../components/Loader.svelte"
 ---
 
 <BaseLayout>
 	<div class="w-full h-full flex flex-col justify-center items-center p-3 md:p-0">
-		<h1 transition:name="heading" class="text-4xl md:text-6xl glow-text creepster mb-6">spookytales.com.es</h1>
+		<h1 transition:name="heading" class="text-4xl text-orange-400 md:text-6xl glow-text creepster mb-6">spookytales.com.es</h1>
 		<p class="text-lg md:text-xl mb-10 max-w-2xl">Adéntrate en un mundo de misterio. Sube una fotografía tuya y transforma tu destino en una experiencia de terror única.</p>
 
 		<ImageUploader/>
