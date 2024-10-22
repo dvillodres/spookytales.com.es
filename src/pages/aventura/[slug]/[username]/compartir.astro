@@ -26,7 +26,7 @@ const {slug, username} = Astro.params
                     <p class="mb-6 font-light"><strong class="capitalize">{username}</strong> te ha invitado a descubrir la experiencia única de <a class="text-purple-500 hover:text-purple-600 creepster font-medium" href="https://spookytales.com.es">spookytales</a>. No te pierdas esta aventura terrorífica.</p>
 
                     <a
-                            href="/"
+                            href=`/aventura/${slug}/${username}`
                             class="block w-full text-center cursor-pointer bg-purple-950/40 backdrop-blur-2xl border border-neutral-900 p-2 rounded text-sm  glow-text creepster mb-2"
                     >
                         Ver la aventura de <strong class="capitalize">{username}</strong>
