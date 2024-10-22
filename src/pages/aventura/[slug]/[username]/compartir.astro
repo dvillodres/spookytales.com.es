@@ -23,8 +23,14 @@ const {slug, username} = Astro.params
                 <div class="w-full p-10 md:w-2/3 bg-neutral-900/40 rounded-2xl">
                     <h1 class="text-2xl w-full mb-4"> <span class="creepster">Comparte la experiencia spookytales.com.es</span> 🎃👻</h1>
 
-                    <p class="mb-3 font-light"><strong class="capitalize">{username}</strong> te ha invitado a descubrir la experiencia única de <a class="text-purple-500 hover:text-purple-600 creepster font-medium" href="https://spookytales.com.es">spookytales</a>. No te pierdas esta aventura terrorífica.</p>
+                    <p class="mb-6 font-light"><strong class="capitalize">{username}</strong> te ha invitado a descubrir la experiencia única de <a class="text-purple-500 hover:text-purple-600 creepster font-medium" href="https://spookytales.com.es">spookytales</a>. No te pierdas esta aventura terrorífica.</p>
 
+                    <a
+                            href="/"
+                            class="block w-full text-center cursor-pointer bg-purple-950/40 backdrop-blur-2xl border border-neutral-900 p-2 rounded text-sm  glow-text creepster mb-2"
+                    >
+                        Ver la aventura de <strong class="capitalize">{username}</strong>
+                    </a>
                     <a
                             href="/"
                             class="block w-full text-center cursor-pointer bg-purple-950/40 backdrop-blur-2xl border border-neutral-900 p-2 rounded text-sm  glow-text creepster mb-6"
