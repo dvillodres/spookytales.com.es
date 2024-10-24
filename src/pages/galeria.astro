@@ -2,12 +2,60 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout bg="/assets/img/wip.webp">
-	<div class="w-full h-full flex flex-col items-center justify-center p-3 md:p-0">
-		<div class="max-w-[960px] w-full text-gray-300 p-8 md:p-20 text-left bg-neutral-900/40 backdrop-blur-2xl rounded-xl">
-			<p class="creepster text-2xl mb-4">🚧 Galería en construcción 👻</p>
-			<p class="mb-2 font-light">Pronto podrás explorar las fotos de otros usuarios y descubrir las historias mágicas que esconden. 🖼️✨</p>
-			<p class="mb-2 font-light">¡Nuestros fantasmas están trabajando en ello, no te lo pierdas! 🎃🛠️</p>
+<BaseLayout title="Galería de imagenes" bg="/assets/img/wip.webp">
+	<div class="w-full h-full flex flex-col items-center justify-center p-3 md:p-0  text-left">
+		<div class="w-full h-full mt-12 p-20">
+			<h1 class="creepster text-orange-500 text-4xl border-b-2 border-orange-500">Galería</h1>
+
+			<div class="p-10 ">
+				<p class="text-lg text-neutral-300 mt-4">
+					Disfruta de las terroríficas transformaciones creadas por <a href="/aventura/n6tklle4hfvp90sx7qpu/steff" class="text-orange-500">@steff</a>. Sumérgete en su arte visual inspirado por las pesadillas y lo macabro, donde la inteligencia artificial cobra vida.
+				</p>
+
+				<div class="p-10 flex flex-wrap justify-center gap-4">
+					<div class="w-64 h-64 overflow-hidden rounded-2xl border-2 border-neutral-900">
+						<img alt="" class="object-cover object-center w-full h-full" src="/assets/img/transformacion.gif">
+					</div>
+					<div style="background-image: url('/assets/img/bg.webp'); background-size: cover; background-position: center;" class="w-80 h-64 overflow-hidden rounded-2xl border-2 border-neutral-900">
+						<img style="z-index: 2" alt="" class="character object-cover object-center w-full h-full backdrop-blur-sm" src="/assets/img/steff-1.png">
+					</div>
+					<div style="background-image: url('/assets/img/bg-compartir.webp'); background-size: cover; background-position: center;" class="w-48 h-64 overflow-hidden rounded-2xl border-2 border-neutral-900">
+						<img style="z-index: 2" alt="" class="character object-cover object-center w-full h-full backdrop-blur-sm" src="/assets/img/steff-2.png">
+					</div>
+					<div style="background-image: url('/assets/img/bg-path.webp'); background-size: cover; background-position: center;" class="w-80 h-64 overflow-hidden rounded-2xl border-2 border-neutral-900">
+						<img style="z-index: 2" alt="" class="character object-cover object-center w-full h-full backdrop-blur-sm" src="/assets/img/steff-3.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="p-10 ">
+				<p class="text-lg text-neutral-300 mt-4">
+					Explora las inquietantes transformaciones realizadas por <a href="/aventura/icluzooc0lvdaufq4nrs/juan" class="text-orange-500">@juan</a>. Déjate envolver por su arte visual, donde lo siniestro y las pesadillas cobran vida a través del poder de la inteligencia artificial.
+				</p>
+
+				<div class="p-10 flex flex-wrap justify-center gap-4">
+					<div class="w-48 h-64 overflow-hidden rounded-2xl border-2 border-neutral-900">
+						<img alt="" class="object-cover object-center w-full h-full" src="/assets/img/juan.webp">
+					</div>
+					<div style="background-image: url('/assets/img/bg.webp'); background-size: cover; background-position: center;" class="w-80 h-64 overflow-hidden rounded-2xl border-2 border-neutral-900">
+						<img style="z-index: 2" alt="" class="character object-cover object-center w-full h-full backdrop-blur-sm" src="/assets/img/juan-1.webp">
+					</div>
+					<div style="background-image: url('/assets/img/bg-compartir.webp'); background-size: cover; background-position: center;" class="w-64 h-64 overflow-hidden rounded-2xl border-2 border-neutral-900">
+						<img style="z-index: 2" alt="" class="character object-cover object-center w-full h-full backdrop-blur-sm" src="/assets/img/juan-2.webp">
+					</div>
+					<div style="background-image: url('/assets/img/bg-path.webp'); background-size: cover; background-position: center;" class="w-80 h-64 overflow-hidden rounded-2xl border-2 border-neutral-900">
+						<img style="z-index: 2" alt="" class="character object-cover object-center w-full h-full backdrop-blur-sm" src="/assets/img/juan-3.webp">
+					</div>
+				</div>
+			</div>
+
+			<h2 class="creepster text-orange-500 text-4xl border-b-2 border-orange-500">Video promocional</h2>
+			<div class="p-10 flex justify-center items-center">
+				<div class="w-full md:w-2/3 overflow-hidden rounded-3xl">
+					<iframe width="100%" height="500" src="https://www.youtube.com/embed/xBAiL7258hg?si=_y3yIbjaIVo6l5UO&amp;controls=0" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </BaseLayout>

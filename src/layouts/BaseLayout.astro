@@ -1,8 +1,8 @@
 ---
 import Header from "../components/Header.astro";
-const {bg = '/assets/img/bg.webp', fog = true} = Astro.props;
+const {bg = '/assets/img/bg.webp', fog = true, title = null} = Astro.props;
 
-const title = "Historias Interactivas con tus fotografías | spookytales.com.es";
+const titleCalculated = (title !== null ? title : "Historias Interactivas con tus fotografías") + " | spookytales.com.es";
 const description = "Adéntrate en un mundo de misterio. Sube una fotografía tuya y transforma tu destino en una experiencia de terror única.";
 ---
 <!DOCTYPE html>
@@ -10,9 +10,9 @@ const description = "Adéntrate en un mundo de misterio. Sube una fotografía tu
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
+    <title>{titleCalculated}</title>
 
-    <meta name="title" content={title} />
+    <meta name="title" content={titleCalculated} />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
     <meta name="google-adsense-account" content="ca-pub-9406276311201724">
@@ -20,14 +20,14 @@ const description = "Adéntrate en un mundo de misterio. Sube una fotografía tu
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={titleCalculated} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL('/assets/img/spookytales.webp', Astro.url)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
+    <meta property="twitter:title" content={titleCalculated} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL('/assets/img/spookytales.webp', Astro.url)} />
 
@@ -80,7 +80,7 @@ const description = "Adéntrate en un mundo de misterio. Sube una fotografía tu
 
         @keyframes moveFog {
             from {
-                background-position: 0% 0%;
+                background-position: 0 0;
             }
             to {
                 background-position: 50% 50%;
@@ -96,10 +96,9 @@ const description = "Adéntrate en un mundo de misterio. Sube una fotografía tu
 
 </head>
 <body class=`bg-gray-900 text-white font-sans min-h-screen flex flex-col items-center justify-center ${fog ? 'fog' : ''}` style=`background-image: url(${bg}); background-repeat: no-repeat; background-size: cover;"`>
-
-    <div class=`relative flex flex-col w-full h-screen text-center bg-cover bg-center ${fog ? 'bg-purple-950/60 backdrop-blur-sm' : ''}`>
-        <main class="w-full h-full flex flex-col justify-center items-center overflow-hidden">
-            <Header/>
+<div class=`relative flex flex-col w-full h-screen text-center bg-cover bg-center ${fog ? 'bg-purple-950/60 backdrop-blur-sm' : ''}`>
+    <Header/>
+    <main class="w-full h-full flex flex-col justify-center items-center overflow-y-scroll">
             <slot/>
         </main>
     </div>
